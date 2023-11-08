@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins';
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333; 
+    margin: 0;
+}
+
+#todo-list {
+    background-color: #333; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px #000, -10px -10px 20px #666; 
+    text-align: center;
+    color: #fff; 
+    width: 400px;
+}
+
+#todo-list h1 {
+    margin-bottom: 20px; 
+}
+
+#task{
+    margin-bottom: 20px;
+    border-radius: 5%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: #333; 
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #111, -5px -5px 10px #444; 
+}
+
+li span {
+    flex: 1;
+    margin-right: 10px; 
+    color: #fff; 
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 10px;
+}
+
+input[type="text"] {
+    flex: 1;
+    margin-right: 10px;
+    padding: 5px;
+    border: none;
+    box-shadow: inset 2px 2px 5px #111, inset -2px -2px 5px #444; /* Sombra mais escura */
+    background-color: #444; /* Fundo escuro */
+    color: #fff; /* Texto branco */
+}
+
+input[type="checkbox"] {
+    color: #9b00af;
+}
+
+button {
+    background-color: #9b00af;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #9b00af, -2px -2px 5px #2f0035;
+}
+
+button:hover {
+    background-color: #2f0035;
+}
