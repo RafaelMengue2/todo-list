@@ -20,3 +20,11 @@ addTaskButton.addEventListener("click", () => {
         });
     }
 });
+
+// Adiciona a classe 'deleting' ao deletar uma tarefa
+const taskToDelete = document.getElementById('task-to-delete');
+taskToDelete.classList.add('deleting');
+// Aguarde a conclusão da transição e, em seguida, remova o elemento
+taskToDelete.addEventListener('transitionend', () => {
+    taskToDelete.remove();
+});

@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     font-family: 'Poppins';
+    transition: all 0.3s ease; /* Adiciona uma transição suave para todas as propriedades */
 }
 
 body {
@@ -12,27 +13,51 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #333; 
+    background: url('../transferir.jpg');
+    background-size: cover;
+    background-position: center;
     margin: 0;
+    transition: background 0.3s ease; /* Transição suave para a propriedade background */
 }
 
 #todo-list {
-    background-color: #333; 
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 10px 10px 20px #000, -10px -10px 20px #666; 
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 6px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    color: #fff; 
+    color: #9b00af;
     width: 400px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease; /* Adiciona uma transição suave para todas as propriedades */
+}
+
+#todo-list::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    bottom: -20px;
+    left: -20px;
+    background: inherit;
+    border-radius: inherit;
+    filter: blur(30px);
+    z-index: -1;
+    transition: all 0.3s ease; /* Adiciona uma transição suave para todas as propriedades */
 }
 
 #todo-list h1 {
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
+    color: #9b00af;
+    font-weight: 700;
+    transition: color 0.3s ease; /* Transição suave para a propriedade color */
 }
 
-#task{
+#task {
     margin-bottom: 20px;
-    border-radius: 5%;
+    border-radius: 10px;
 }
 
 ul {
@@ -43,46 +68,60 @@ ul {
 li {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
-    background-color: #333; 
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px #111, -5px -5px 10px #444; 
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.1), -8px -8px 16px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    transition: all 0.3s ease; /* Adiciona uma transição suave para todas as propriedades */
 }
 
+/* Adiciona um efeito de fade-out quando deletando uma tarefa */
+li.deleting {
+    opacity: 0;
+    transition: opacity 0.3s ease-out; /* Adiciona uma transição suave apenas para a opacidade ao deletar */
+}
 li span {
     flex: 1;
-    margin-right: 10px; 
-    color: #fff; 
+    margin-right: 15px;
+    color: #9b00af;
     display: flex;
     justify-content: flex-start;
-    margin-left: 10px;
+    margin-left: 15px;
+    font-weight: 600;
 }
 
 input[type="text"] {
     flex: 1;
-    margin-right: 10px;
-    padding: 5px;
+    margin-right: 15px;
+    padding: 10px;
     border: none;
-    box-shadow: inset 2px 2px 5px #111, inset -2px -2px 5px #444; /* Sombra mais escura */
-    background-color: #444; /* Fundo escuro */
-    color: #fff; /* Texto branco */
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.1);
+    color: #9b00af;
 }
 
 input[type="checkbox"] {
     color: #9b00af;
 }
 
-button {
+input[type="checkbox"]:checked {
     background-color: #9b00af;
+    border-color: #9b00af;
+}
+
+button {
+    background: rgba(155, 0, 175, 0.8);
     color: #fff;
     border: none;
-    padding: 5px 10px;
+    padding: 10px 20px;
     cursor: pointer;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px #9b00af, -2px -2px 5px #2f0035;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(155, 0, 175, 0.5);
+    transition: background 0.3s ease; /* Transição suave para a propriedade background */
 }
 
 button:hover {
-    background-color: #2f0035;
+    background: rgba(47, 0, 53, 0.8);
 }
